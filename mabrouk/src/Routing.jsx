@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Header from "./components/header/Header";
 
 //Pages
 import HomePage from "./pages/homepage/HomePage";
@@ -9,9 +10,12 @@ import routes from "./route";
 
 const Routing = () => {
   return (
-    <Routes>
-      <Route path={routes.HOMEPAGE} element={<HomePage />} />
-    </Routes>
+    <>
+      <Header />
+      <Routes>
+        <Route path={routes.HOMEPAGE} element={<HomePage />} />
+      </Routes>
+    </>
   );
 };
 
