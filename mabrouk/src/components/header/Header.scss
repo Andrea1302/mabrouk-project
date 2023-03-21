@@ -32,8 +32,12 @@ header {
         list-style: none;
         font-size: 18px;
         font-weight: 700;
-        color: #fff;
+        color: #f5f5f5;
         margin: 0 10px;
+        &:hover {
+          color: gold;
+          transition: 0.2s;
+        }
       }
       li.active {
         color: gold;

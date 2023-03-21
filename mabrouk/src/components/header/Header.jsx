@@ -95,16 +95,34 @@ const Header = () => {
     };
   }, [inScroll, hundredScroll]);
 
-  const goTo = (text, link) => () => {
-    const copyLinks = [...links];
-    copyLinks.map((link) => {
-      if (link.text === text) {
-        link.active = true;
-      } else {
-        link.active = false;
-      }
-    });
-    setLinks(copyLinks);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const calcActiveLink = (text) => {
+      const copyLinks = [...links];
+      copyLinks.forEach((link) => {
+        if (link.routeLink === text) {
+          link.active = true;
+        } else {
+          link.active = false;
+        }
+      });
+      setLinks(copyLinks);
+    };
+
+    switch (pathname) {
+      case routes["ESCURSIONI"]:
+        calcActiveLink("ESCURSIONI");
+        break;
+      case routes["RESTAURANT"]:
+        calcActiveLink("RESTAURANT");
+        break;
+      default:
+        calcActiveLink("HOMEPAGE");
+        break;
+    }
+  }, [pathname]);
+
+  const goTo = (link) => () => {
     if (isDropdownOpened) {
       setIsDropdownOpened(false);
     }
@@ -119,7 +137,7 @@ const Header = () => {
   const mappingLinks = (link) => {
     return (
       <li
-        onClick={goTo(link.text, link.routeLink)}
+        onClick={goTo(link.routeLink)}
         className={link.active ? "active" : undefined}
         key={link.text}
       >
