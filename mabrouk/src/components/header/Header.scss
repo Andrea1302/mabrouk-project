@@ -73,14 +73,61 @@ header {
 
 @media screen and (max-width: 767px) {
   header {
+    display: block;
     nav {
       justify-content: space-between;
       .logo {
         margin-right: 0px;
       }
     }
+    .dropdown_menu {
+      z-index: 3;
+      animation-name: open-dropdown;
+      animation-duration: 0.5s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgb(24, 23, 23);
+      height: 100vh;
+      display: block;
+      padding: 30px;
+      .separator {
+        flex-grow: 1;
+      }
+      ion-icon {
+        cursor: pointer;
+      }
+      ul {
+        li {
+          cursor: pointer;
+          list-style: none;
+          font-size: 18px;
+          font-weight: 700;
+          color: #fff;
+          margin: 40px 0;
+          border-bottom: 1px solid #fff;
+          padding-bottom: 10px;
+        }
+        li.active {
+          border-color: gold;
+          color: gold;
+        }
+      }
+    }
   }
   header.inScroll {
     background: rgb(167 160 160 / 35%);
+  }
+}
+
+@keyframes open-dropdown {
+  0% {
+    position: absolute;
+    top: -100vh;
+  }
+  100% {
+    position: absolute;
+    top: 0;
   }
 }

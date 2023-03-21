@@ -1,30 +1,37 @@
 import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 //Style
 import "./Header.scss";
 
 //logo
 import logo2 from "../../assets/imgs/logo2.jpeg";
+//flags
 import itaLang from "../../assets/imgs/itaLang.png";
 import ukFlag from "../../assets/imgs/ukFlag.png";
 
-import { useNavigate } from "react-router-dom";
+//Routes
+import routes from "../../routes";
 
 const initialStateLinks = [
   {
     text: "HOMEPAGE",
+    routeLink: "HOMEPAGE",
     active: true,
   },
   {
     text: "ESCURSIONI",
+    routeLink: "ESCURSIONI",
     active: false,
   },
   {
     text: "RISTORANTE",
+    routeLink: "RESTAURANT",
     active: false,
   },
   {
-    text: "CONATTI",
+    text: "CONTATTI",
+    routeLink: "CONTATTI",
     active: false,
   },
 ];
@@ -52,6 +59,8 @@ const Header = () => {
   const [inScroll, setInscroll] = useState(false);
   const [hundredScroll, setHundredScroll] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const pathname = location.pathname;
 
   useEffect(() => {
     function handleResize() {
@@ -86,7 +95,7 @@ const Header = () => {
     };
   }, [inScroll, hundredScroll]);
 
-  const goTo = (text) => () => {
+  const goTo = (text, link) => () => {
     const copyLinks = [...links];
     copyLinks.map((link) => {
       if (link.text === text) {
@@ -96,12 +105,21 @@ const Header = () => {
       }
     });
     setLinks(copyLinks);
+    if (isDropdownOpened) {
+      setIsDropdownOpened(false);
+    }
+    if (link !== "CONTATTI") {
+      navigate(routes[link]);
+    } else {
+      const contacts = document.querySelector("#contact-us");
+      contacts.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   const mappingLinks = (link) => {
     return (
       <li
-        onClick={goTo(link.text)}
+        onClick={goTo(link.text, link.routeLink)}
         className={link.active ? "active" : undefined}
         key={link.text}
       >
@@ -135,6 +153,9 @@ const Header = () => {
   };
 
   const setScrollClassName = () => {
+    if (pathname !== "/") {
+      return "inScroll hundred";
+    }
     let className = undefined;
     if (inScroll) {
       className = "inScroll";
@@ -143,6 +164,10 @@ const Header = () => {
       className = "inScroll hundred";
     }
     return className;
+  };
+
+  const handleHamburgerMenu = () => {
+    setIsDropdownOpened(!isDropdownOpened);
   };
 
   return (
@@ -159,13 +184,26 @@ const Header = () => {
         <>
           <header className={setScrollClassName()}>
             <nav>
-              {isDropdownOpened && <ul>{links.map(mappingLinks)}</ul>}
               <ion-icon
+                onClick={handleHamburgerMenu}
                 className="hamburger_menu"
                 name="menu-outline"
               ></ion-icon>
               <section>{langs.map(mappingLang)}</section>
             </nav>
+            {isDropdownOpened && (
+              <section className="dropdown_menu">
+                <div style={{ display: "flex" }}>
+                  <div className="separator"></div>
+                  <ion-icon
+                    onClick={handleHamburgerMenu}
+                    className="close_hamburger_menu"
+                    name="close-circle-outline"
+                  ></ion-icon>
+                </div>
+                <ul>{links.map(mappingLinks)}</ul>
+              </section>
+            )}
           </header>
         </>
       )}
