@@ -37,13 +37,11 @@ const Discover = () => {
     return <Card key={card.id} product={card} />;
   };
   return (
-    <>
-      <div className="container_discover">
-        <h2>Due servizi diversi, stessa qualità!</h2>
-        <h6>Scopri di più sul nostro ristorante e sulle nostre escursioni</h6>
-        <section className="discover_more">{cards.map(mappingCard)}</section>
-      </div>
-    </>
+    <div className="container_discover">
+      <h2>Due servizi diversi, stessa qualità!</h2>
+      <h6>Scopri di più sul nostro ristorante e sulle nostre escursioni</h6>
+      <section className="discover_more">{cards.map(mappingCard)}</section>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import Discover from "../../components/discover/Discover";
 import Slogan from "../../components/slogan/Slogan";
 
 //Style
-import "./HomePage.css";
+import "./HomePage.scss";
 
 const HomePage = () => {
   return (

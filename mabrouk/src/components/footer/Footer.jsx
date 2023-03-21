@@ -1,17 +1,8 @@
+//Style
+import "./Footer.scss";
+
 const Footer = () => {
-  return (
-    <footer
-      style={{
-        background: "#000",
-        height: "40vh",
-        paddingTop: "10vh",
-        color: "#fff",
-      }}
-      id="contact-us"
-    >
-      Contatti
-    </footer>
-  );
+  return <footer id="contact-us">Contatti</footer>;
 };
 
 export default Footer;

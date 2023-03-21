@@ -1,10 +1,12 @@
+@import "../../global.scss";
+
 header.inScroll {
   background: rgba(39, 39, 39, 0.35);
   backdrop-filter: blur(4px);
   transition: 1s;
 }
 header.inScroll.hundred {
-  background: rgba(39, 39, 39);
+  background: $secondary-color;
   border-bottom: unset;
   ion-icon {
     color: #fff;
@@ -35,12 +37,12 @@ header {
         color: #f5f5f5;
         margin: 0 10px;
         &:hover {
-          color: gold;
+          color: $gold-color;
           transition: 0.2s;
         }
       }
       li.active {
-        color: gold;
+        color: $gold-color;
       }
     }
     .logo {
@@ -114,8 +116,8 @@ header {
           padding-bottom: 10px;
         }
         li.active {
-          border-color: gold;
-          color: gold;
+          border-color: $gold-color;
+          color: $gold-color;
         }
       }
     }
@@ -128,10 +130,10 @@ header {
 @keyframes open-dropdown {
   0% {
     position: absolute;
-    top: -100vh;
+    left: -100vw;
   }
   100% {
     position: absolute;
-    top: 0;
+    left: 0;
   }
 }

@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import "./Slogan.css";
+import { useState, useEffect, Fragment } from "react";
+import Button from "../ui/button/Button";
+import "./Slogan.scss";
 
 const changeActivePhrase = (sentences, index) => {
   const copySentences = [...sentences];
@@ -25,17 +26,17 @@ function Slogan() {
     const timeout1 = setTimeout(() => {
       const newsentences = changeActivePhrase(sentences, 1);
       setSentences(newsentences);
-    }, 1200); // visualizza la frase "Solo fresco" dopo 2 secondi
+    }, 1000); // visualizza la frase "Solo fresco" dopo 2 secondi
 
     const timeout2 = setTimeout(() => {
       const newsentences = changeActivePhrase(sentences, 2);
       setSentences(newsentences);
-    }, 2400);
+    }, 2000);
 
     const timeout3 = setTimeout(() => {
       const newsentences = changeActivePhrase(sentences, 3);
       setSentences(newsentences);
-    }, 3600);
+    }, 3000);
 
     return () => {
       clearTimeout(timeout1);
@@ -44,17 +45,20 @@ function Slogan() {
     };
   }, []);
 
+  const discover = () => {
+    const discoverContainer = document.querySelector(".container_discover");
+    discoverContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const mappingFrasi = (sentence, index) => {
     if (sentence.active) {
       return (
-        <div
-          key={sentence.text}
-          className={
-            index === sentences.length - 1 ? "sentence last" : "sentence"
-          }
-        >
-          {sentence.text}
-        </div>
+        <Fragment key={sentence.text}>
+          <div className="sentence">{sentence.text}</div>
+          {index === sentences.length - 1 && (
+            <Button onClick={discover} text={"SCOPRI DI PIù"} />
+          )}
+        </Fragment>
       );
     }
   };
