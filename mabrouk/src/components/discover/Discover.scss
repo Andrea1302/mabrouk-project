@@ -1,0 +1,19 @@
+.container_discover {
+  padding: 50px 25px;
+  color: #262626;
+  h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+  h6 {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .discover_more {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+  }
+}

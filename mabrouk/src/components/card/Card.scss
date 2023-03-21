@@ -1,0 +1,72 @@
+.card {
+  margin-top: 80px;
+  width: 45%;
+  height: 550px;
+  padding-bottom: 25px;
+  box-shadow: 0px 0px 20px 0px #b6b6b6;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #262626;
+  color: #f5f5f5;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  .container_description {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 25px 0;
+    overflow-y: scroll;
+    height: 40%;
+  }
+  .card_img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .title {
+    margin: 20px 0 10px;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  .discover_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    span {
+      display: inline-block;
+      margin-right: 10px;
+      color: gold;
+      cursor: pointer;
+    }
+    ion-icon {
+      color: gold;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 20px 0px #b6b6b6;
+    .container_description {
+      height: 50%;
+    }
+    .card_img {
+      height: 50%;
+    }
+    &:hover {
+      transform: unset;
+      transition: unset;
+    }
+  }
+}
