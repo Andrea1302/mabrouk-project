@@ -148,7 +148,7 @@ const Header = () => {
 
   const changeLang = (id) => () => {
     const copyLangs = [...langs];
-    copyLangs.map((lang) => {
+    copyLangs.forEach((lang) => {
       if (lang.id === id) {
         lang.active = true;
       } else {
