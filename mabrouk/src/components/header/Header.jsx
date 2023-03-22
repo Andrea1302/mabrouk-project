@@ -12,29 +12,7 @@ import ukFlag from "../../assets/imgs/ukFlag.png";
 
 //Routes
 import routes from "../../routes";
-
-const initialStateLinks = [
-  {
-    text: "HOMEPAGE",
-    routeLink: "HOMEPAGE",
-    active: true,
-  },
-  {
-    text: "ESCURSIONI",
-    routeLink: "ESCURSIONI",
-    active: false,
-  },
-  {
-    text: "RISTORANTE",
-    routeLink: "RESTAURANT",
-    active: false,
-  },
-  {
-    text: "CONTATTI",
-    routeLink: "CONTATTI",
-    active: false,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const initialStateLanguages = [
   {
@@ -51,7 +29,32 @@ const initialStateLanguages = [
   },
 ];
 
+const initialStateLinks = [
+  {
+    text: "header.homepage",
+    routeLink: "HOMEPAGE",
+    active: true,
+  },
+  {
+    text: "header.escursioni",
+    routeLink: "ESCURSIONI",
+    active: false,
+  },
+  {
+    text: "header.ristorante",
+    routeLink: "RESTAURANT",
+    active: false,
+  },
+  {
+    text: "header.contatti",
+    routeLink: "CONTATTI",
+    active: false,
+  },
+];
+
 const Header = () => {
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
   const [links, setLinks] = useState(initialStateLinks);
   const [langs, setLangs] = useState(initialStateLanguages);
   const [width, setWidth] = useState(window.innerWidth);
@@ -141,7 +144,7 @@ const Header = () => {
         className={link.active ? "active" : undefined}
         key={link.text}
       >
-        {link.text}
+        {t(link.text)}
       </li>
     );
   };
@@ -156,6 +159,7 @@ const Header = () => {
       }
     });
     setLangs(copyLangs);
+    i18n.changeLanguage(id);
   };
 
   const mappingLang = (lang) => {

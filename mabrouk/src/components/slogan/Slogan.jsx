@@ -1,5 +1,12 @@
 import { useState, useEffect, Fragment } from "react";
+
+//Translations
+import { useTranslation } from "react-i18next";
+
+//Components
 import Button from "../ui/button/Button";
+
+//Style
 import "./Slogan.scss";
 
 const changeActivePhrase = (sentences, index) => {
@@ -15,10 +22,12 @@ const changeActivePhrase = (sentences, index) => {
 };
 
 function Slogan() {
+  const { t } = useTranslation();
+
   const [sentences, setSentences] = useState([
-    { text: "SOLO PESCE", active: true },
-    { text: "SOLO FRESCO", active: false },
-    { text: "SOLO LA SERA", active: false },
+    { text: t("slogan.fish"), active: true },
+    { text: t("slogan.fresh"), active: false },
+    { text: t("slogan.evening"), active: false },
     { text: "MABROUK", active: false },
   ]);
 
@@ -56,7 +65,7 @@ function Slogan() {
         <Fragment key={sentence.text}>
           <div className="sentence">{sentence.text}</div>
           {index === sentences.length - 1 && (
-            <Button onClick={discover} text={"SCOPRI DI PIù"} />
+            <Button onClick={discover} text={t("slogan.discoverMore")} />
           )}
         </Fragment>
       );
