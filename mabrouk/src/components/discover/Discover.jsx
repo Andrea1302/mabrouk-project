@@ -10,36 +10,36 @@ import Card from "../card/Card";
 
 //Routes
 import routes from "../../routes";
+import { useTranslation } from "react-i18next";
 
 const cards = [
   {
     id: 1,
     src: restaurant,
     alt: "restaurant-img",
-    title: "IL RISTORANTE",
+    title: "card.ristorante.titolo",
     link: routes.RESTAURANT,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ducimus laboriosam necessitatibus, molestiae magnam suscipit sed delectus amet voluptate omnis, sint corrupti similique, consequuntur blanditiis. Eum, officia? Nesciunt, quas modi.",
+    description: "card.escursioni.descrizione",
   },
   {
     id: 2,
     src: boat,
     alt: "barca-img",
-    title: "LE NOSTRE ESCURSIONI",
+    title: "card.escursioni.titolo",
     link: routes.ESCURSIONI,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ducimus laboriosam necessitatibus, molestiae magnam suscipit sed delectus amet voluptate omnis, sint corrupti similique, consequuntur blanditiis. Eum, officia? Nesciunt, quas modi.",
+    description: "card.escursioni.descrizione",
   },
 ];
 
 const Discover = () => {
+  const { t } = useTranslation();
   const mappingCard = (card) => {
     return <Card key={card.id} product={card} />;
   };
   return (
     <div className="container_discover">
-      <h2>Due servizi diversi, stessa qualità!</h2>
-      <h6>Scopri di più sul nostro ristorante e sulle nostre escursioni</h6>
+      <h2>{t("discover.titolo")}</h2>
+      <h6>{t("discover.sottotitolo")}</h6>
       <section className="discover_more">{cards.map(mappingCard)}</section>
     </div>
   );

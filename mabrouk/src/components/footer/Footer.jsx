@@ -1,10 +1,14 @@
+//Translation
+import { useTranslation } from "react-i18next";
+
 //Style
 import "./Footer.scss";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer id="contact-us">
-      <div className="title">CONTATTI</div>
+      <div className="title">{t("contatti.titolo")}</div>
       <section className="container_footer">
         <div className="item_footer">
           <div className="icon_footer">
@@ -26,7 +30,7 @@ const Footer = () => {
         </div>
         <div className="social item_footer">
           <div>
-            <span className="title_social">SEGUICI SU</span>
+            <span className="title_social">{t("contatti.seguici")}</span>
             <div className="social_icon">
               <ion-icon name="logo-facebook"></ion-icon>
               <ion-icon name="logo-instagram"></ion-icon>

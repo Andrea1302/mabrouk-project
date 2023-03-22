@@ -1,14 +1,31 @@
 export const TRANSLATIONS_EN = {
+  common: {
+    discoverMore: "DISCOVER MORE",
+  },
   header: {
     escursioni: "BOAT EXCURSION",
     ristorante: "RESTAURANT",
     homepage: "HOMEPAGE",
     contatti: "CONTACTS",
   },
-  slogan: {
-    fish: "ONLY FISH",
-    fresh: "ONLY FRESH",
-    evening: "ONLY DINNER",
-    discoverMore: "DISCOVER MORE",
+  card: {
+    ristorante: {
+      titolo: "THE RESTAURANT",
+      descrizione:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ducimus laboriosam necessitatibus, molestiae magnam suscipit sed delectus amet voluptate omnis, sint corrupti similique, consequuntur blanditiis. Eum, officia? Nesciunt, quas modi.",
+    },
+    escursioni: {
+      titolo: "BOAT EXCURSIONS",
+      descrizione:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ducimus laboriosam necessitatibus, molestiae magnam suscipit sed delectus amet voluptate omnis, sint corrupti similique, consequuntur blanditiis. Eum, officia? Nesciunt, quas modi.",
+    },
+  },
+  discover: {
+    titolo: "Two different services, same quality!",
+    sottotitolo: "Learn more about our restaurant and our excursions",
+  },
+  contatti: {
+    titolo: "CONTACTS",
+    seguici: "FOLLOW US ON",
   },
 };
