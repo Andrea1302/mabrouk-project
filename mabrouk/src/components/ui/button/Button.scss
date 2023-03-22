@@ -1,3 +1,5 @@
+@import "../../../global";
+
 button {
   margin-top: 30px;
   min-width: 180px;
@@ -10,4 +12,8 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
+  &:hover {
+    background-color: $hover-color;
+    transition: 0.3s;
+  }
 }
