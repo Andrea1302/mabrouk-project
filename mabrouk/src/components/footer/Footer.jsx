@@ -15,9 +15,15 @@ const Footer = () => {
             <ion-icon name="call-outline"></ion-icon>
           </div>
           <ul>
-            <li>+393333333333</li>
-            <li>+393300000000</li>
-            <li>0790000000</li>
+            <li>
+              <a href="tel:+393404035349">+393404035349</a>
+            </li>
+            <li>
+              <a href="tel:+393459751816">+393459751816</a>
+            </li>
+            <li>
+              <a href="tel:079970000">079970000</a>
+            </li>
           </ul>
         </div>
         <div className="item_footer center">
@@ -25,16 +31,38 @@ const Footer = () => {
             <ion-icon name="mail-outline"></ion-icon>
           </div>
           <ul>
-            <li>mabrouk@gmail.com</li>
+            <li>
+              <a href="mailto:Pasquale.lorenzoni@gmail.com">
+                Pasquale.lorenzoni@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
         <div className="social item_footer">
           <div>
             <span className="title_social">{t("contatti.seguici")}</span>
             <div className="social_icon">
-              <ion-icon name="logo-facebook"></ion-icon>
-              <ion-icon name="logo-instagram"></ion-icon>
-              <ion-icon name="logo-tiktok"></ion-icon>
+              <a
+                href="https://www.facebook.com/mabroukalghero/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a
+                href="https://www.instagram.com/mabroukaho/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+              <a
+                href="https://www.tiktok.com/@mabroukAho"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
             </div>
           </div>
         </div>

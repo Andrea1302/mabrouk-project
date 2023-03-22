@@ -21,3 +21,9 @@
     background-color: $primary-color;
   }
 }
+
+@media screen and (max-height: 450px) {
+  .container_discover {
+    padding: 17vh 25px;
+  }
+}
