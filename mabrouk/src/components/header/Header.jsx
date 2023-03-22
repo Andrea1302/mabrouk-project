@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./Header.scss";
 
 //logo
-import logo2 from "../../assets/imgs/logo2.jpeg";
+import logoMabrouk from "../../assets/imgs/logoMabrouk.png";
 //flags
 import itaLang from "../../assets/imgs/itaLang.png";
 import ukFlag from "../../assets/imgs/ukFlag.png";
@@ -193,7 +193,7 @@ const Header = () => {
       {width > 767 ? (
         <header className={setScrollClassName()}>
           <nav>
-            <img className="logo" src={logo2} alt="logo mabrouk" />
+            <img className="logo" src={logoMabrouk} alt="logo mabrouk" />
             <ul>{links.map(mappingLinks)}</ul>
           </nav>
           <section>{langs.map(mappingLang)}</section>
