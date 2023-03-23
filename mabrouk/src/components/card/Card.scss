@@ -9,10 +9,13 @@
   overflow: hidden;
   background-color: $secondary-color;
   color: $primary-color;
+  transition: 0.5s;
+
   &:hover {
     transform: scale(1.1);
     transition: 0.5s;
   }
+
   .container_description {
     display: flex;
     justify-content: space-between;

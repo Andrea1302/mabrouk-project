@@ -65,6 +65,8 @@ footer {
         ion-icon {
           margin-right: 32px;
           cursor: pointer;
+          transition: 0.3s;
+
           &:hover {
             color: $gold-color;
             transition: 0.3s;
