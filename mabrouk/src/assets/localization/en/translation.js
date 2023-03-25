@@ -12,12 +12,12 @@ export const TRANSLATIONS_EN = {
     ristorante: {
       titolo: "THE RESTAURANT",
       descrizione:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ducimus laboriosam necessitatibus, molestiae magnam suscipit sed delectus amet voluptate omnis, sint corrupti similique, consequuntur blanditiis. Eum, officia? Nesciunt, quas modi.",
+        "Only fish, only fresh, only at dinner is our motto, and it encapsulates a lifestyle that has represented us for over 25 years!",
     },
     escursioni: {
       titolo: "BOAT EXCURSIONS",
       descrizione:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ducimus laboriosam necessitatibus, molestiae magnam suscipit sed delectus amet voluptate omnis, sint corrupti similique, consequuntur blanditiis. Eum, officia? Nesciunt, quas modi.",
+        "Starting from 2022, we also offer the possibility to enjoy our specialties directly in the middle of the sea!",
     },
   },
   discover: {

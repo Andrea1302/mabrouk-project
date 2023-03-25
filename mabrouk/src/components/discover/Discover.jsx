@@ -19,7 +19,7 @@ const cards = [
     alt: "restaurant-img",
     title: "card.ristorante.titolo",
     link: routes.RESTAURANT,
-    description: "card.escursioni.descrizione",
+    description: "card.ristorante.descrizione",
   },
   {
     id: 2,

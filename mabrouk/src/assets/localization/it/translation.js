@@ -12,12 +12,12 @@ export const TRANSLATIONS_IT = {
     ristorante: {
       titolo: "IL RISTORANTE",
       descrizione:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ducimus laboriosam necessitatibus, molestiae magnam suscipit sed delectus amet voluptate omnis, sint corrupti similique, consequuntur blanditiis. Eum, officia? Nesciunt, quas modi.",
+        "Solo pesce,solo fresco, solo la sera è il nostro motto e racchiude uno stile di vita che più ci rappresenta da più di 25 anni!",
     },
     escursioni: {
       titolo: "LE NOSTRE ESCURSIONI",
       descrizione:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ducimus laboriosam necessitatibus, molestiae magnam suscipit sed delectus amet voluptate omnis, sint corrupti similique, consequuntur blanditiis. Eum, officia? Nesciunt, quas modi.",
+        "Dal 2022 è possibile assaporare le nostre specialità direttamente in mezzo al mare !",
     },
   },
   discover: {
