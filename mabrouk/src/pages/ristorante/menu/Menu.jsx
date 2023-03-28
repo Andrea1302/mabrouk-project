@@ -43,17 +43,13 @@ const Menu = () => {
   };
   return (
     <section className="menu_wrapper">
-      <h2>Le nostre proposte</h2>
-      <h5>
-        Il nostro ristorante offre un menù fisso, si tratta di una combinazione
-        e sapori del nostro mare.
-      </h5>
-      <h6>*In tutti i menù sono inclusi acqua e vino della casa</h6>
+      <h2>{t("ristorante.menu.titolo")}</h2>
+      <h5>{t("ristorante.menu.sottotitolo")}</h5>
+      <h6>{t("ristorante.menu.disclaimer")}</h6>
       <div className="container_card_menu">{articles.map(mappingArticle)}</div>
-      <p className="disclaimer">Solo su prenotazione</p>
+      <p className="disclaimer">{t("ristorante.menu.prenotazione")}</p>
       <p className="disclaimer_scelta_menu">
-        La scelta del menù deve coincidere tra tutti i commensali del tavolo,
-        per qualsiasi altra richiesta si è pregati di comunicarla in anticipo.
+        {t("ristorante.menu.sceltaMenu")}
       </p>
     </section>
   );

@@ -29,6 +29,13 @@ export const TRANSLATIONS_EN = {
     menuLink: "Our Menu",
     menu: {
       totale: "TOTAL",
+      titolo: "Our offers",
+      sottotitolo:
+        "Our restaurant offers a fixed menu, which consists of a combination of flavors from our sea.",
+      disclaimer: "Water and house wine are included in all menus.",
+      prenotazione: "Only with reservation",
+      sceltaMenu:
+        "The menu choice must be the same for all diners at the table, and any other requests should be communicated in advance.",
       primo: {
         titolo: "MENù DEGUSTAZIONE",
         servizio1: "Fantasia di antipasti",

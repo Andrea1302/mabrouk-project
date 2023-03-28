@@ -30,6 +30,13 @@ export const TRANSLATIONS_IT = {
     menuLink: "Il nostro menù",
     menu: {
       totale: "TOTALE",
+      titolo: "Le nostre proposte",
+      sottotitolo:
+        "Il nostro ristorante offre un menù fisso, si tratta di una combinazione e sapori del nostro mare.",
+      disclaimer: "*In tutti i menù sono inclusi acqua e vino della casa",
+      prenotazione: "Solo su prenotazione",
+      sceltaMenu:
+        "La scelta del menù deve coincidere tra tutti i commensali del tavolo,per qualsiasi altra richiesta si è pregati di comunicarla in anticipo.",
       primo: {
         titolo: "MENù DEGUSTAZIONE",
         servizio1: "Fantasia di antipasti",
