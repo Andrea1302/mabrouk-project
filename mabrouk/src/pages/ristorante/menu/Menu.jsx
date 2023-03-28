@@ -46,10 +46,10 @@ const Menu = () => {
       </h5>
       <h6>*In tutti i menù sono inclusi acqua e vino della casa</h6>
       <div className="container_card_menu">{articles.map(mappingArticle)}</div>
-      <p className="disclaimer">Solo con prenotazione</p>
+      <p className="disclaimer">Solo su prenotazione</p>
       <p className="disclaimer_scelta_menu">
         La scelta del menù deve coincidere tra tutti i commensali del tavolo,
-        per qualsiasi altra richiesta si è pregati di informare con anticipo
+        per qualsiasi altra richiesta si è pregati di comunicarla in anticipo.
       </p>
     </section>
   );
