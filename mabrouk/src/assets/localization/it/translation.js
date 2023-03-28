@@ -25,6 +25,62 @@ export const TRANSLATIONS_IT = {
     sottotitolo:
       "Scopri di più sul nostro ristorante e sulle nostre escursioni",
   },
+  ristorante: {
+    storyLink: "La nostra storia",
+    menuLink: "Il nostro menù",
+    menu: {
+      totale: "TOTALE",
+      primo: {
+        titolo: "MENù DEGUSTAZIONE",
+        servizio1: "Fantasia di antipasti",
+        servizio2: "Bis di primi piatti",
+        servizio3: "Bis di secondi piatti",
+        servizio4: "Dolce",
+      },
+      secondo: {
+        titolo: "MENù SECONDI PIATTI",
+        servizio1: "Fantasia di antipasti",
+        servizio2: "Bis di secondi piatti",
+        servizio3: "Dolce",
+      },
+      terzo: {
+        titolo: "MENù PRIMI PIATTI",
+        servizio1: "Fantasia di antipasti",
+        servizio2: "Bis di primi piatti",
+        servizio3: "Dolce",
+      },
+      quarto: {
+        titolo: "MENù ARAGOSTA",
+        servizio1: "Fantasia di antipasti",
+        servizio2: "Bis di primi piatti",
+        servizio3: "Aragosta alla catalana",
+        servizio4: "Dolce",
+      },
+      quinto: {
+        titolo: "MENù ANTIPASTI E ARAGOSTA",
+        servizio1: "Fantasia di antipasti",
+        servizio2: "Aragosta alla catalana",
+        servizio3: "Dolce",
+      },
+      sesto: {
+        titolo: "MENù CRUDI",
+        servizio1: "Fantasia di crudi",
+        servizio2: "Fantasia di antipasti",
+        servizio3: "Aragosta alla catalana",
+        servizio4: "Dolce",
+      },
+    },
+    storia: {
+      titolo: "Da più di 25 anni con la stessa passione",
+      primoTitolo: "NASCE IL MABROUK",
+      primoParagrafo:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eosnulla earum autem recusandae quam explicabo aut. Repellat,facilis sunt. Sit, soluta impedit! Incidunt, quas distinctio? Eius explicabo ex eum voluptatibus.",
+      secondoTitolo: "FINO IN AMERICA",
+      secondoParagrafo: "Trasmesso dalla CNN",
+      terzoTitolo: "ESCURSIONI",
+      terzoParagrafo: "Il mabrouk direttamente in mezzo al mare",
+    },
+  },
   contatti: {
     titolo: "CONTATTI",
     seguici: "SEGUICI SU",

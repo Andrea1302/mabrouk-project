@@ -5,10 +5,14 @@ import "../Restaurant.scss";
 //articles
 import { articles } from "./articles";
 
+//Translation
+import { useTranslation } from "react-i18next";
+
 const Menu = () => {
+  const { t } = useTranslation();
   const mappingArticle = (article, index) => {
     const mappingServices = (service, i) => {
-      return <li key={i}>{service}</li>;
+      return <li key={i}>{t(service)}</li>;
     };
     return (
       <article
@@ -23,13 +27,13 @@ const Menu = () => {
         }
       >
         <div className="detail_menu">
-          <h3 style={{ textTransform: "uppercase" }}>{article.title}</h3>
+          <h3 style={{ textTransform: "uppercase" }}>{t(article.title)}</h3>
 
           <ul className="services_ul">
             {article.services.map(mappingServices)}
           </ul>
           <div className="tot_menu">
-            <span>TOTALE</span>
+            <span>{t("ristorante.menu.totale")}</span>
             <span>{article.tot} €</span>
           </div>
         </div>

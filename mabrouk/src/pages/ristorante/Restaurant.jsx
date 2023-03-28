@@ -8,7 +8,11 @@ import Container from "../../components/container/Container";
 import Story from "./story/Story";
 import Menu from "./menu/Menu";
 
+//translations
+import { useTranslation } from "react-i18next";
+
 const Restaurant = () => {
+  const { t } = useTranslation();
   const [activeSection, setActiveSection] = useState("story");
 
   const handleSection = (par) => () => {
@@ -23,13 +27,13 @@ const Restaurant = () => {
               onClick={handleSection("story")}
               className={activeSection === "story" ? "active first" : "first"}
             >
-              LA NOSTRA STORIA
+              {t("ristorante.storyLink")}
             </li>
             <li
               onClick={handleSection("menu")}
               className={activeSection !== "story" ? "active second" : "second"}
             >
-              IL NOSTRO MENU
+              {t("ristorante.menuLink")}
             </li>
           </ul>
         </nav>

@@ -1,31 +1,34 @@
 import { VerticalTimeline } from "react-vertical-timeline-component";
+
+//Components
 import HistorySection from "./HistorySection";
 
 //Style
 import "../Restaurant.scss";
+//translations
+import { useTranslation } from "react-i18next";
 
 const Story = () => {
+  const { t } = useTranslation();
+
   return (
     <section>
-      <h2>Da più di 25 anni con la stessa passione</h2>
+      <h2>{t("ristorante.storia.titolo")}</h2>
       <VerticalTimeline>
         <HistorySection
           date={"1996"}
-          paragraph=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-              nulla earum autem recusandae quam explicabo aut. Repellat,
-              facilis sunt. Sit, soluta impedit! Incidunt, quas distinctio?
-              Eius explicabo ex eum voluptatibus."
-          title="NASCE IL MABROUK"
+          paragraph={t("ristorante.storia.primoParagrafo")}
+          title={t("ristorante.storia.primoTitolo")}
         />
         <HistorySection
           date={"2012"}
-          paragraph="Trasmesso dalla CNN"
-          title="FINO IN AMERICA"
+          paragraph={t("ristorante.storia.secondoParagrafo")}
+          title={t("ristorante.storia.secondoTitolo")}
         />
         <HistorySection
           date={"2022"}
-          paragraph="Il mabrouk direttamente in mezzo al mare"
-          title="ESCURSIONI"
+          paragraph={t("ristorante.storia.terzoParagrafo")}
+          title={t("ristorante.storia.terzoTitolo")}
         />
       </VerticalTimeline>
     </section>
