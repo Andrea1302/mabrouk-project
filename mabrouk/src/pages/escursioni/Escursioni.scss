@@ -1,0 +1,51 @@
+@import "../../global";
+
+.exscursion_landing {
+  transition: ease-in-out 0.6s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 100vw;
+  background-attachment: fixed;
+  p,
+  h1 {
+    text-align: center;
+    width: 60%;
+    color: $primary-color;
+  }
+  p {
+    margin-top: 24px;
+  }
+  h5 {
+    color: $primary-color;
+  }
+  ul {
+    margin-top: 20px;
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 8px;
+      list-style: none;
+      padding-bottom: 5px;
+    }
+    li.active {
+      color: gold;
+      font-weight: bold;
+      transition: 0.4s;
+      border-bottom: 2px solid;
+    }
+  }
+}
+.container_content_excursion {
+  background-color: $primary-color;
+  padding: 40px 5vw;
+  .excursion_article {
+  }
+  .excursion_contacts {
+    display: inline-block;
+    margin-left: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
